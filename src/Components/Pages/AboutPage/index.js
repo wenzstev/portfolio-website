@@ -5,8 +5,18 @@ import InfoPage from "../../Templates/InfoPage"
 import {
   Typography,
   Divider,
+  Grid,
   makeStyles
 } from "@material-ui/core"
+
+import {
+  PythonStackButton,
+  FlaskStackButton,
+  HTMLStackButton,
+  ReactStackButton,
+  MUIStackButton,
+  JSStackButton
+} from "./StackButtons"
 
 const useStyles = makeStyles({
   root: {
@@ -25,10 +35,15 @@ const AboutPage = () => {
       <Typography>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       </Typography>
-      <StyledDivider />
-      <Typography align="center" variant="h3">Front End</Typography>
-      <StyledDivider />
-      <Typography align="center" variant="h3">Back End</Typography>
+      <Grid container justify="space-evenly">
+        <StyledDivider />
+        <PythonStackButton />
+        <FlaskStackButton />
+        <JSStackButton />
+        <ReactStackButton />
+        <HTMLStackButton />
+        <MUIStackButton />
+      </Grid>
     </InfoPage>
   )
 }
