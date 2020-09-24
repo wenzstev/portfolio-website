@@ -25,6 +25,8 @@ const PortfolioCard = (props) => {
 
   const handleClose = () => setModalOpen(false)
 
+  console.log(props.modalInfo)
+
   return (
     <Grid item xs={12} sm={6}>
       <Card>
@@ -52,7 +54,7 @@ const PortfolioCard = (props) => {
         </Grid>
         </Box>
       </Card>
-      <PortfolioModal modalOpen={modalOpen} onClose={handleClose}/>
+      <PortfolioModal modalOpen={modalOpen} onClose={handleClose} info={props.modalInfo}/>
     </Grid>
   )
 }

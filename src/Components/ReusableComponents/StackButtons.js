@@ -6,12 +6,12 @@ import {
 } from "@material-ui/core"
 import Image from "material-ui-image"
 
-import pyLogo from "../../../Assets/python-logo.png"
-import flaskLogo from "../../../Assets/flask-logo.png"
-import htmlLogo from "../../../Assets/html-logo.png"
-import jsLogo from "../../../Assets/javascript-logo.png"
-import muiLogo from "../../../Assets/materialui-logo.png"
-import reactLogo from "../../../Assets/react-logo.png"
+import pyLogo from "../../Assets/python-logo.png"
+import flaskLogo from "../../Assets/flask-logo.png"
+import htmlLogo from "../../Assets/html-logo.png"
+import jsLogo from "../../Assets/javascript-logo.png"
+import muiLogo from "../../Assets/materialui-logo.png"
+import reactLogo from "../../Assets/react-logo.png"
 
 const useStyles = makeStyles({
   image: {

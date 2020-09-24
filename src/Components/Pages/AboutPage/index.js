@@ -1,6 +1,6 @@
 import React from "react"
 
-import InfoPage from "../../Templates/InfoPage"
+import InfoPage from "../../ReusableComponents/InfoPage"
 
 import {
   Typography,
@@ -16,7 +16,7 @@ import {
   ReactStackButton,
   MUIStackButton,
   JSStackButton
-} from "./StackButtons"
+} from "../../ReusableComponents/StackButtons"
 
 const useStyles = makeStyles({
   root: {
