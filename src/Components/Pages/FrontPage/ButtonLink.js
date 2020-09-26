@@ -33,8 +33,9 @@ const ButtonLink = (props) => {
       <ButtonBase
         focusRipple
         className={classes.root}
-        component={RouterLink}
-        to={props.to}>
+        component={props.external ? 'a' : RouterLink}
+        to={props.to}
+        href={props.external ? props.to : null}>
         <Box p={4}>
           <Box px={2} className="frameBox">
             <Typography variant="h5">{props.text}</Typography>

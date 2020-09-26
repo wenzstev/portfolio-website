@@ -13,7 +13,9 @@ import {
 } from "@material-ui/core"
 
 import ButtonLink from "./ButtonLink"
+import InfoPage from "../../ReusableComponents/InfoPage"
 
+const BLOGURL = "https://wenzstev.github.io"
 
 const AboutLink = () => {
   return <ButtonLink to="/about" backgroundColor="teal" text="About" />
@@ -24,7 +26,7 @@ const PortfolioLink = () => {
 }
 
 const BlogLink = () => {
-  return <ButtonLink to="/blank" backgroundColor="SlateBlue" text="Blog" />
+  return <ButtonLink external to={BLOGURL} backgroundColor="SlateBlue" text="Blog" />
 }
 
 const ContactLink = () => {
@@ -35,7 +37,7 @@ const ContactLink = () => {
 
 const FrontPage = () => {
   return (
-    <Container>
+    <InfoPage>
       <Box m={5} />
       <Typography align="center" variant="h1">Steve Wenzel</Typography>
       <Typography align="center" variant="h3">Fullstack Developer</Typography>
@@ -54,7 +56,7 @@ const FrontPage = () => {
           <ContactLink />
         </Grid>
       </Grid>
-    </Container>
+    </InfoPage>
   )
 }
 
