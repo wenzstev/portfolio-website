@@ -30,7 +30,7 @@ export const basicTheme = {
   },
   surfaces: {
     backgroundPanel: {
-      backgroundColor: "rgba(255, 255, 255, .4)"
+      backgroundColor: "rgba(255, 255, 255, .8)"
     },
     cards: {
       backgroundColor: "#dfe8f2"
@@ -104,7 +104,7 @@ export const landscapeTheme = {
   },
   surfaces: {
     backgroundPanel: {
-      backgroundColor: "rgba(0, 0, 0, .2)"
+      backgroundColor: "rgba(0, 0, 0, .4)"
     },
     cards: {
       backgroundColor: "#e2e3d6",

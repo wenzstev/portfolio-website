@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     backgroundPosition: "center center",
     minHeight: "100vh",
     height: "auto",
-    width: "100vw",
+    width:"100%",
     position: "absolute",
     top: 0,
     left: 0

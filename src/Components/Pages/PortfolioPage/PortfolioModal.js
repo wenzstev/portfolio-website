@@ -113,11 +113,12 @@ const PortfolioModal = (props) => {
         ) : null}
         <Box mb={3} />
         </Box>
-        {buttons.length > 0 ? (
-          <Grid container justify="space-evenly">
-            {buttons.map((item, index)=>convertTextToDemoButton(item, index))}
-          </Grid>
-        ) : null}
+        <Grid container justify="space-evenly">
+            {Object.keys(buttons).map((key, index)=>{
+              console.log(key)
+              return (<Button fullWidth key={index} href={buttons[key]}>{key}</Button>)
+            })}
+        </Grid>
       </Paper>
     </Modal>
 

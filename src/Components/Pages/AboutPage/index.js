@@ -9,12 +9,14 @@ import {
   makeStyles
 } from "@material-ui/core"
 
+import {Link} from "react-router-dom"
+
 import {
   PythonStackButton,
   FlaskStackButton,
   HTMLStackButton,
   ReactStackButton,
-  MUIStackButton,
+  ReduxStackButton,
   JSStackButton
 } from "../../ReusableComponents/StackButtons"
 
@@ -25,7 +27,8 @@ const useStyles = makeStyles({
     margin: "20px 0px"
   },
   body: {
-    transition: "all 1s"
+    transition: "all 1s",
+    margin: "10px 0px"
   }
 })
 
@@ -40,7 +43,24 @@ const AboutPage = (props) => {
   return (
     <InfoPage title="About">
       <Typography className={classes.body} style={bodyStyle}>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        Hi, I'm Steve! I'm a Full Stack Developer living in Brooklyn.
+        I graduated in 2017 from Washington University in St. Louis with a minor
+        in Computer Science, and I've been coding seriously since September 2019.
+        These days I primarily code in Python and JavaScript. I started a <a href="https://wenzstev.github.io">blog</a> back in January, where
+        I've been writing about my development journey and the challenges I've faced in
+        making my various projects.
+      </Typography>
+      <Typography className={classes.body} style={bodyStyle}>
+        In my free time, I've been trying to make the best of COVID with an assortment of
+        hobbies, including cooking and baking, development, and writing. My favorite kind of
+        project is one where I can involve my other hobbies; both SousChef and Easy Draft
+        stemmed from a desire to do something with cooking and writing, respectively.
+      </Typography>
+      <Typography className={classes.body} style={bodyStyle}>
+        If you want to get in contact with me, leave a note through
+        the <Link to="/contact">contact page</Link> and I'll get back to you as soon as possible. Otherwise, feel free to browse my projects on
+        my <Link to="/portfolio">portfolio page</Link> or check out my <a href="https://github.com/wenzstev">GitHub</a>.
+        Thanks for stopping by!
       </Typography>
       <Grid container justify="space-evenly">
         <StyledDivider />
@@ -49,7 +69,7 @@ const AboutPage = (props) => {
         <JSStackButton />
         <ReactStackButton />
         <HTMLStackButton />
-        <MUIStackButton />
+        <ReduxStackButton />
       </Grid>
     </InfoPage>
   )

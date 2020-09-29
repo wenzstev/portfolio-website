@@ -31,7 +31,7 @@ export const portfolioModals = [
   stack: ["javascript", "react", "mui"],
   stackDescription: "The application is written entirely in React, with some functions in vanilla JavaScript. Material-UI is used to give the application a modern feel, with custom styling to ensure it doesn't look like a discount Google offering.",
   images: [souschefAbout, souschef2],
-  buttons: ["live"]
+  buttons: {live:"https://souschef.stevenwenzel.com", github:"https://github.com/wenzstev/grocery-app-frontend"}
   },
   {
   title: "RecipeBox API",
@@ -51,7 +51,7 @@ export const portfolioModals = [
     from provided recipe lines. Marshmallow was used for serialization, and the database was written using the SQLAlchemy ORM.
     `,
   images: [],
-  buttons: ["live", "github"]
+  buttons: {live: "https://souschef.stevenwenzel.com/api", github:"https://github.com/wenzstev/groceryappRestAPI"}
   },
   {
     title: "Portfolio Site",
@@ -70,7 +70,7 @@ export const portfolioModals = [
       in Flask, that sends emails to my inbox when users fill out the "Contact" form.
     `,
     images: [portfolioPreview, portfolioPage, contactPage, frontPageMobile],
-    buttons: ["github"]
+    buttons: {live: "https://stevenwenzel.com", github: "https://github.com/wenzstev/portfolio-website"}
   },
   {
     title: "Easy Draft",
@@ -87,9 +87,9 @@ export const portfolioModals = [
     stackDescription: `
       Written in React, with a small Redux store that keeps track of the chosen sprint time and whether or not
       the user wants a quote. As this was my introductory project to Material-UI, there is little custom styling; I wanted
-      to familiarize myself with the library as-is first. 
+      to familiarize myself with the library as-is first.
       `,
     images: [sprinterPreview, sprinterHowto, sprinterDownload],
-    buttons:["live", "github"]
+    buttons:{live: "https://wenzstev.github.io/writingsprinter", github:"https://github.com/wenzstev/writingsprinter"}
   }
 ]

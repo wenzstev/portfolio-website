@@ -47,7 +47,7 @@ const PortfolioCard = (props) => {
         <Box mx={4} my={2}>
           <Typography><b>{info.title}</b> - {info.byline}</Typography>
         </Box>
-        <Button variant="contained" fullWidth>Live Site</Button>
+        <Button variant="contained" fullWidth href={info.buttons.live}>Live Site</Button>
       </Card>
       <PortfolioModal modalOpen={modalOpen} onClose={handleClose} info={info}/>
     </Grid>
