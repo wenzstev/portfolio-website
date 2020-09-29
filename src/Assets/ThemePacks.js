@@ -5,22 +5,23 @@ import landscapeBackground from "./background-landscape.jpg"
 
 import frozenTreeBackground from "./frozen-tree.jpg"
 
+import forestBackground from "./fog-1535201.jpg"
 
 export const basicTheme = {
   name: "basic",
-  background: "",
-  thumbnail: "",
+  background: forestBackground,
+  thumbnail: forestBackground,
   frontPageLinkColors: {
-    about: "#F51720",
-    portfolio: "#FA26A0",
-    blog: "#F8D210",
-    contact: "#2FF3E0"
+    about: "#1C3C51",
+    portfolio: "#546B86",
+    blog: "#547484",
+    contact: "#BFD3E5"
   },
   header: {
     color: "black"
   },
   body: {
-    color: "darkgray"
+    color: "black"
   },
   input: {
     backgroundColor: "lightgray",
@@ -48,6 +49,12 @@ export const jellyfishTheme = {
   name: "jelly",
   background: jellyBackground,
   thumbnail: jellyThumbnail,
+  frontPageLinkColors: {
+    about: "#999583",
+    portfolio: "#5B7189",
+    blog: "#76868C",
+    contact: "#0E1216"
+  },
   header: {
     color: "white"
   },
@@ -65,7 +72,17 @@ export const landscapeTheme = {
   name: "landscape",
   background: landscapeBackground,
   thumbnail: landscapeBackground,
-  header:{},
-  body: {},
+  frontPageLinkColors: {
+    about: "#D8D0C7",
+    portfolio: "#8DA7C5",
+    blog: "#76868C",
+    contact: "#646745"
+  },
+  header:{
+    color: "white"
+  },
+  body: {
+    color: "white"
+  },
   input: {}
 }

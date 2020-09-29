@@ -9,19 +9,16 @@ import {
 import flaskLogo from "../../../Assets/flask-logo.png"
 
 import {
-  testModal
+  portfolioModals
 } from "./ProjectModals"
 
 const PortfolioPage = () => {
   return (
     <InfoPage title="Portfolio">
-      <Grid container>
-        <PortfolioCard
-          name="test"
-          preview={flaskLogo}
-          byline="A portfolio project."
-          modalInfo={testModal}
-          />
+      <Grid container spacing={3}>
+        {portfolioModals.map((item, index)=>(
+          <PortfolioCard key={index} info={item} />
+        ))}
       </Grid>
     </InfoPage>
   )

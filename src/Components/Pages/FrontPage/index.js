@@ -17,6 +17,8 @@ import InfoPage from "../../ReusableComponents/InfoPage"
 
 import {useSelector} from "react-redux"
 
+
+
 const BLOGURL = "https://wenzstev.github.io"
 
 const AboutLink = () => {
@@ -43,12 +45,15 @@ const ContactLink = () => {
 
 const FrontPage = () => {
   const headerClass = useSelector(store=>store.header)
-
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('sm'))
   return (
     <InfoPage>
       <Box m={5} />
-      <Typography style={headerClass} align="center" variant="h1">Steve Wenzel</Typography>
-      <Typography style={headerClass} align="center" variant="h3">Fullstack Developer</Typography>
+      <Typography style={headerClass} align="center" variant={matches ? "h1" : "h2"}>Steve Wenzel</Typography>
+      {matches ?
+         <Typography style={headerClass} align="center" variant="h3">Fullstack Developer</Typography>
+          :null}
       <Box m={3} />
       <Grid container>
         <Grid item xs={12} sm={4}>

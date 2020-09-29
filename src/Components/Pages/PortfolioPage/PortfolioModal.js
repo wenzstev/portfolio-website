@@ -56,6 +56,10 @@ const useStyles = makeStyles({
   paper: {
     overflow: "auto",
     paddingBottom:"1px" // to fit the scrollbar
+  },
+  content: {
+    maxHeight: "82vh",
+    overflow: "auto"
   }
 })
 
@@ -66,7 +70,7 @@ const PortfolioModal = (props) => {
   return (
     <Modal className={classes.modal} open={props.modalOpen} onClose={props.onClose}>
       <Paper className={classes.paper}>
-      <Box p={2}>
+      <Box p={2} className={classes.content}>
         <Typography variant="h3">{title}</Typography>
         <Typography className={classes.paragraph}>
           {description}
@@ -86,8 +90,9 @@ const PortfolioModal = (props) => {
           ))}
         </GridList>
         <Box mb={3} />
-        <Button fullWidth>Live Site</Button>
         </Box>
+        <Button fullWidth>Live Site</Button>
+
       </Paper>
     </Modal>
 

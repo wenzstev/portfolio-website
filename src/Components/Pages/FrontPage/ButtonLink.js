@@ -15,9 +15,11 @@ const useStyles = makeStyles({
     backgroundColor: props=>props.backgroundColor,
     height: props=>props.height,
     color: "white",
-    transition: "opacity .2s",
+    transition: "opacity 1s",
+    opacity: "1",
+    transition: "background-color 1s ease",
     "&:hover":{
-      opacity: ".9",
+      opacity: ".8",
       "& .frameBox":{
         outline: "5px solid white",
       }

@@ -6,6 +6,7 @@ import {
   Typography,
   Button,
   Box,
+  ButtonBase,
   makeStyles
 } from "@material-ui/core"
 
@@ -25,36 +26,27 @@ const PortfolioCard = (props) => {
 
   const handleClose = () => setModalOpen(false)
 
+  const {info} = props
+
   console.log(props.modalInfo)
 
   return (
     <Grid item xs={12} sm={6}>
       <Card>
-        <Typography
-          variant="h4"
-          align="center">
-        {props.name}
-        </Typography>
-        <Image
-          src={props.preview}
-          style={{height:200, padding:0}}
-          imageStyle={{width: "auto", display:"block", margin:"auto", position:"static"}}
-        />
-        <Box mx={4} my={2}>
-          <Typography>{props.byline}</Typography>
-        </Box>
-        <Box m={2}>
-        <Grid container justify="space-evenly">
-          <Grid item>
-            <Button onClick={()=>setModalOpen(true)}>Description</Button>
-          </Grid>
-          <Grid item>
-            <Button>Live Site</Button>
-          </Grid>
+        <Grid container justify="center">
+          <ButtonBase onClick={()=>setModalOpen(true)}>
+            <Image
+              src={info.preview}
+              style={{height:200, padding:0, margin: "auto"}}
+              imageStyle={{width: "auto", display:"block", margin:"auto", position:"static"}}/>
+          </ButtonBase>
         </Grid>
+        <Box mx={4} my={2}>
+          <Typography><b>{info.title}</b> - {info.byline}</Typography>
         </Box>
+        <Button variant="contained" fullWidth>Live Site</Button>
       </Card>
-      <PortfolioModal modalOpen={modalOpen} onClose={handleClose} info={props.modalInfo}/>
+      <PortfolioModal modalOpen={modalOpen} onClose={handleClose} info={info}/>
     </Grid>
   )
 }
