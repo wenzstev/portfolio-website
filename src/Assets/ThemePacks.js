@@ -27,6 +27,14 @@ export const basicTheme = {
     backgroundColor: "lightgray",
     borderColor: "black",
     borderColorHover: "darkgray"
+  },
+  surfaces: {
+    backgroundPanel: {
+      backgroundColor: "rgba(255, 255, 255, .4)"
+    },
+    cards: {
+      backgroundColor: "#dfe8f2"
+    }
   }
 }
 
@@ -39,6 +47,14 @@ export const frozenTreeTheme = {
     portfolio: "#746B61",
     blog: "#746B61",
     contact: "#797563"
+  },
+  surfaces: {
+    backgroundPanel: {
+      backgroundColor: "rgba(0, 0, 0, .1)"
+    },
+    cards: {
+      backgroundColor: "#bdbbaf",
+    },
   },
   header: {},
   body: {},
@@ -55,11 +71,19 @@ export const jellyfishTheme = {
     blog: "#76868C",
     contact: "#0E1216"
   },
+  surfaces: {
+    backgroundPanel: {
+      backgroundColor: "rgba(255, 255, 255, .6)"
+    },
+    cards: {
+      backgroundColor: "#eae9e6",
+    },
+  },
   header: {
-    color: "white"
+    color: "black"
   },
   body: {
-    color: "white"
+    color: "black"
   },
   input: {
     backgroundColor: "lightgray",
@@ -77,6 +101,14 @@ export const landscapeTheme = {
     portfolio: "#8DA7C5",
     blog: "#76868C",
     contact: "#646745"
+  },
+  surfaces: {
+    backgroundPanel: {
+      backgroundColor: "rgba(0, 0, 0, .2)"
+    },
+    cards: {
+      backgroundColor: "#e2e3d6",
+    },
   },
   header:{
     color: "white"

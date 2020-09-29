@@ -12,6 +12,7 @@ import htmlLogo from "../../Assets/html-logo.png"
 import jsLogo from "../../Assets/javascript-logo.png"
 import muiLogo from "../../Assets/materialui-logo.png"
 import reactLogo from "../../Assets/react-logo.png"
+import reduxLogo from "../../Assets/redux-logo.png"
 
 const useStyles = makeStyles({
   image: {
@@ -41,3 +42,4 @@ export const JSStackButton = () => <BaseStackButton image={jsLogo} />
 export const HTMLStackButton = () => <BaseStackButton image={htmlLogo} />
 export const MUIStackButton = () => <BaseStackButton image={muiLogo} />
 export const ReactStackButton = () => <BaseStackButton image={reactLogo} />
+export const ReduxStackButton = () => <BaseStackButton image={reduxLogo} />

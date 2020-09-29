@@ -50,6 +50,7 @@ const InfoPage = (props) => {
   const background = useSelector(store=>store.background)
   const headerClass = useSelector(store=>store.header)
   const bodyClass = useSelector(store=>store.body)
+  const surfaceStyles = useSelector(store=>store.surfaces.backgroundPanel)
 
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
@@ -59,7 +60,7 @@ const InfoPage = (props) => {
     <Box className={classes.root} style={{backgroundImage:`url(${background})`}}>
       {matches ? <Box className={classes.topSpacer} /> : null}
       <Container>
-          <Paper className={classes.backgroundPanel}>
+          <Paper className={classes.backgroundPanel} style={surfaceStyles}>
           <BackgroundBar />
           <Box>
             <Typography className={classes.textTransition} variant="h2" align="center" style={headerClass}>

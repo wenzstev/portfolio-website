@@ -1,5 +1,7 @@
 import React, {useState} from "react"
 
+import {useSelector} from "react-redux"
+
 import {
   Card,
   Grid,
@@ -23,6 +25,7 @@ const useStyles = makeStyles({
 const PortfolioCard = (props) => {
   const [modalOpen, setModalOpen] = useState(false)
   const classes = useStyles()
+  const cardStyles = useSelector(store=>store.surfaces.cards)
 
   const handleClose = () => setModalOpen(false)
 
@@ -32,12 +35,12 @@ const PortfolioCard = (props) => {
 
   return (
     <Grid item xs={12} sm={6}>
-      <Card>
+      <Card style={cardStyles}>
         <Grid container justify="center">
           <ButtonBase onClick={()=>setModalOpen(true)}>
             <Image
               src={info.preview}
-              style={{height:200, padding:0, margin: "auto"}}
+              style={{height:200, padding:0, margin: "auto", backgroundColor: cardStyles.backgroundColor}}
               imageStyle={{width: "auto", display:"block", margin:"auto", position:"static"}}/>
           </ButtonBase>
         </Grid>

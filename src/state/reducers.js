@@ -57,13 +57,23 @@ const buttonReducer = (state=basicTheme.frontPageLinkColors, action) => {
   }
 }
 
+const surfaceReducer = (state=basicTheme.surfaces, action) => {
+  switch(action.type){
+    case "SETTHEME":
+      return action.payload.surfaces
+    default:
+      return state
+  }
+}
+
 const rootReducer = combineReducers({
   name: nameReducer,
   background: backgroundReducer,
   header: headerReducer,
   body: bodyReducer,
   input: inputReducer,
-  buttons: buttonReducer
+  buttons: buttonReducer,
+  surfaces: surfaceReducer
 })
 
 export default rootReducer

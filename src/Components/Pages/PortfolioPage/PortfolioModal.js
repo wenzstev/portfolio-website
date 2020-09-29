@@ -19,7 +19,8 @@ import {
   JSStackButton,
   MUIStackButton,
   HTMLStackButton,
-  ReactStackButton
+  ReactStackButton,
+  ReduxStackButton
 } from "../../ReusableComponents/StackButtons"
 
 import Image from "material-ui-image"
@@ -38,9 +39,26 @@ const convertTextToStackButton = (item, index) => {
       return <ReactStackButton key={index} />
     case "html":
       return <HTMLStackButton key={index} />
+    case "redux":
+      return <ReduxStackButton key={index} />
     default:
       return <div />
   }
+}
+
+const convertTextToDemoButton = (item, index) => {
+  var button
+  switch(item){
+    case "live":
+      button = <Button fullWidth>Live Site</Button>
+      break
+    case "github":
+      button = <Button fullWidth>GitHub</Button>
+      break
+    default:
+      button = <div />
+  }
+  return <Grid item key={index}>{button}</Grid>
 }
 
 const useStyles = makeStyles({
@@ -65,7 +83,7 @@ const useStyles = makeStyles({
 
 const PortfolioModal = (props) => {
   const classes = useStyles()
-  const {title, description, stack, stackDescription, images} = props.info
+  const {title, description, stack, stackDescription, images, buttons} = props.info
   console.log(images)
   return (
     <Modal className={classes.modal} open={props.modalOpen} onClose={props.onClose}>
@@ -80,19 +98,26 @@ const PortfolioModal = (props) => {
           {stack.map((item, index)=>convertTextToStackButton(item, index))}
         </Grid>
         <Typography className={classes.paragraph}>{stackDescription}</Typography>
-        <Typography variant="h4">Additional Images</Typography>
-        <Box mb={3} />
-        <GridList className={classes.root}>
-          {images.map((item, index)=>(
-            <GridListTile className={classes.tile} key={index}>
-              <img src={item} />
-            </GridListTile>
-          ))}
-        </GridList>
+        {images.length > 0 ? (
+          <>
+          <Typography variant="h4">Additional Images</Typography>
+          <Box mb={3} />
+          <GridList className={classes.root}>
+            {images.map((item, index)=>(
+              <GridListTile className={classes.tile} key={index}>
+                <img src={item} />
+              </GridListTile>
+            ))}
+          </GridList>
+          </>
+        ) : null}
         <Box mb={3} />
         </Box>
-        <Button fullWidth>Live Site</Button>
-
+        {buttons.length > 0 ? (
+          <Grid container justify="space-evenly">
+            {buttons.map((item, index)=>convertTextToDemoButton(item, index))}
+          </Grid>
+        ) : null}
       </Paper>
     </Modal>
 
