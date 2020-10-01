@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core"
 
 import {Link} from "react-router-dom"
+import Image from "material-ui-image"
 
 import {
   PythonStackButton,
@@ -22,6 +23,8 @@ import {
 
 import {useSelector} from "react-redux"
 
+import devPic from "../../../Assets/cropped_picture.jpg"
+
 const useStyles = makeStyles({
   root: {
     margin: "20px 0px"
@@ -29,7 +32,8 @@ const useStyles = makeStyles({
   body: {
     transition: "all 1s",
     margin: "10px 0px"
-  }
+  },
+
 })
 
 const StyledDivider = () =>{
@@ -42,6 +46,9 @@ const AboutPage = (props) => {
   const bodyStyle = useSelector(store=>store.body)
   return (
     <InfoPage title="About">
+      <Grid container justify="center">
+        <Image src={devPic} style={{height: 300, width:300, padding:0, backgroundColor:"inherit", textAlign:"center"}} imageStyle={{borderRadius: "100%", width:"auto", position:"inherit"}}/>
+      </Grid>
       <Typography className={classes.body} style={bodyStyle}>
         Hi, I'm Steve! I'm a Full Stack Developer living in Brooklyn.
         I graduated in 2017 from Washington University in St. Louis with a minor

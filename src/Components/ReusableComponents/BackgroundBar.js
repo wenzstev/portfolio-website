@@ -18,7 +18,8 @@ import {
   basicTheme,
   jellyfishTheme,
   landscapeTheme,
-  frozenTreeTheme
+  frozenTreeTheme,
+  currantTheme
 } from "../../Assets/ThemePacks"
 
 import {

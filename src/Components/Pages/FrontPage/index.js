@@ -48,12 +48,10 @@ const FrontPage = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
   return (
-    <InfoPage>
+    <InfoPage noBack>
       <Box m={5} />
       <Typography style={headerClass} align="center" variant={matches ? "h1" : "h2"}>Steve Wenzel</Typography>
-      {matches ?
-         <Typography style={headerClass} align="center" variant="h3">Fullstack Developer</Typography>
-          :null}
+      <Typography style={headerClass} align="center" variant={matches ? "h3" : "h4"}>Fullstack Developer</Typography>
       <Box m={3} />
       <Grid container>
         <Grid item xs={12} sm={4}>
@@ -64,9 +62,6 @@ const FrontPage = () => {
         </Grid>
         <Grid item xs={12} sm={4}>
           <BlogLink />
-        </Grid>
-        <Grid item xs={12}>
-          <ContactLink />
         </Grid>
       </Grid>
     </InfoPage>

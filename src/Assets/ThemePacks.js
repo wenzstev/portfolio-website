@@ -1,11 +1,15 @@
-import jellyBackground from "./background-jellyfish.jpg"
+import jellyBackground from "./jellyfish-5592320_1920.jpg"
 import jellyThumbnail from "./thumbnail-jellyfish.jpg"
 
 import landscapeBackground from "./background-landscape.jpg"
 
-import frozenTreeBackground from "./frozen-tree.jpg"
+import frozenTreeBackground from "./wattle-tree-5358904_1920.jpg"
 
 import forestBackground from "./fog-1535201.jpg"
+
+import grassBackground from "./dragonfly-5298749_1920.jpg"
+
+import currantBackground from "./currants-5270094_1920.jpg"
 
 export const basicTheme = {
   name: "basic",
@@ -94,27 +98,54 @@ export const jellyfishTheme = {
 
 export const landscapeTheme = {
   name: "landscape",
-  background: landscapeBackground,
-  thumbnail: landscapeBackground,
+  background: grassBackground,
+  thumbnail: grassBackground,
   frontPageLinkColors: {
-    about: "#D8D0C7",
-    portfolio: "#8DA7C5",
-    blog: "#76868C",
-    contact: "#646745"
+    about: "#273008",
+    portfolio: "#7BA231",
+    blog: "#A4C161",
+    contact: "#7C8890"
   },
   surfaces: {
     backgroundPanel: {
-      backgroundColor: "rgba(0, 0, 0, .4)"
+      backgroundColor: "rgba(255, 255, 255, .5)"
     },
     cards: {
-      backgroundColor: "#e2e3d6",
+      backgroundColor: "#d1e0b0",
     },
   },
   header:{
-    color: "white"
+    color: "black"
   },
   body: {
-    color: "white"
+    color: "black"
+  },
+  input: {}
+}
+
+export const currantTheme = {
+  name: "currant",
+  background: currantBackground,
+  thumbnail: currantBackground,
+  frontPageLinkColors: {
+    about: "#273008",
+    portfolio: "#7BA231",
+    blog: "#A4C161",
+    contact: "#7C8890"
+  },
+  surfaces: {
+    backgroundPanel: {
+      backgroundColor: "rgba(255, 255, 255, .5)"
+    },
+    cards: {
+      backgroundColor: "#A4C161",
+    },
+  },
+  header:{
+    color: "black"
+  },
+  body: {
+    color: "black"
   },
   input: {}
 }

@@ -10,9 +10,12 @@ import {
   useTheme
 } from "@material-ui/core"
 
+
+
 import {useSelector} from "react-redux"
 
 import BackgroundBar from "./BackgroundBar"
+import BackArrow from "./BackArrow"
 
 const useStyles = makeStyles({
   root: {
@@ -45,6 +48,7 @@ const useStyles = makeStyles({
   }
 })
 
+
 const InfoPage = (props) => {
   const classes = useStyles()
   const background = useSelector(store=>store.background)
@@ -61,6 +65,7 @@ const InfoPage = (props) => {
       {matches ? <Box className={classes.topSpacer} /> : null}
       <Container>
           <Paper className={classes.backgroundPanel} style={surfaceStyles}>
+          {props.noBack ? null : <BackArrow />}
           <BackgroundBar />
           <Box>
             <Typography className={classes.textTransition} variant="h2" align="center" style={headerClass}>
