@@ -11,37 +11,6 @@ import grassBackground from "./dragonfly-5298749_1920.jpg"
 
 import currantBackground from "./currants-5270094_1920.jpg"
 
-export const basicTheme = {
-  name: "basic",
-  background: forestBackground,
-  thumbnail: forestBackground,
-  frontPageLinkColors: {
-    about: "#1C3C51",
-    portfolio: "#546B86",
-    blog: "#547484",
-    contact: "#BFD3E5"
-  },
-  header: {
-    color: "black"
-  },
-  body: {
-    color: "black"
-  },
-  input: {
-    backgroundColor: "lightgray",
-    borderColor: "black",
-    borderColorHover: "darkgray"
-  },
-  surfaces: {
-    backgroundPanel: {
-      backgroundColor: "rgba(255, 255, 255, .8)"
-    },
-    cards: {
-      backgroundColor: "#dfe8f2"
-    }
-  }
-}
-
 export const frozenTreeTheme = {
   name: "frozenTree",
   background: frozenTreeBackground,
